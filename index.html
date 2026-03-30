@@ -14,65 +14,30 @@
       padding: 0;
       text-align: center;
     }
-
     .container {
       max-width: 520px;
-      margin: 40px auto;
+      margin: 60px auto;
       padding: 24px;
     }
-
-    iframe {
-      width: 100%;
-      height: 315px;
-      border: none;
-      margin-top: 20px;
-    }
   </style>
+
+  <script>
+    // April 1, 2026 — MONTH IS ZERO-INDEXED (3 = April)
+    var releaseDate = new Date(2026, 3, 1, 0, 0, 0);
+    var now = new Date();
+
+    if (now >= releaseDate) {
+      // Rick Roll redirect
+      window.location.replace(
+        "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+      );
+    }
+  </script>
 </head>
 <body>
 
 <div class="container">
-  <h1 id="title">Service Status</h1>
-
-  <p id="message">
-    Checking service availability...
+  <h1>Service Temporarily Unavailable</h1>
+  <p>
+    Due to high volume, WiFi signal harmonization is temporarily unavailable.
   </p>
-
-
-<iframe
-  id="video"
-  allow="autoplay; encrypted-media"
-  allowfullscreen
-  style="display:none">
-</iframe>
-
-
-</div>
-
-<script>
-  // April 1, 2026 (MONTH MUST BE 3)
-  var releaseDate = new Date(2026, 2, 1, 0, 0, 0);
-  var now = new Date();
-
-  var title = document.getElementById("title");
-  var message = document.getElementById("message");
-  var video = document.getElementById("video");
-
-  if (now < releaseDate) {
-    title.innerText = "Service Temporarily Unavailable";
-    message.innerText =
-      "Due to high volume, WiFi signal harmonization is temporarily unavailable.\n\n" +
-      "Please check back in 24 hours.";
-  } else {
-    title.innerText = "Optimizing Signal...";
-    message.innerText = "Tap video for audio if muted.";
-    video.style.display = "block";
-
-    video.src =
-      "https://www.youtube-nocookie.com/embed/2qBlE2-WL60?autoplay=1&mute=1&rel=0";
-  }
-</script>
-
-
-</body>
-</html>
