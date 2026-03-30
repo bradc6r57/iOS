@@ -38,17 +38,19 @@
     Checking service availability...
   </p>
 
+
 <iframe
   id="video"
-  src="https://www.youtube-nocookie.com/embed/2qBlE2-WL60?autoplay=1&mute=1&rel=0"
   allow="autoplay; encrypted-media"
-  allowfullscreen>
+  allowfullscreen
+  style="display:none">
 </iframe>
+
 
 </div>
 
 <script>
-  // April 1, 2026 (months are zero-based)
+  // April 1, 2026 (MONTH MUST BE 3)
   var releaseDate = new Date(2026, 3, 1, 0, 0, 0);
   var now = new Date();
 
@@ -63,12 +65,14 @@
       "Please check back in 24 hours.";
   } else {
     title.innerText = "Optimizing Signal...";
-    message.innerText = "";
+    message.innerText = "Tap video for audio if muted.";
     video.style.display = "block";
+
     video.src =
-      "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&rel=0";
+      "https://www.youtube-nocookie.com/embed/2qBlE2-WL60?autoplay=1&mute=1&rel=0";
   }
 </script>
+
 
 </body>
 </html>
